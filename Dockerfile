@@ -30,6 +30,8 @@ FROM python:3.14-slim-trixie
 # Python executable must be the same, e.g., using `python:3.11-slim-trixie`
 # will fail.
 
+LABEL org.opencontainers.image.source=https://github.com/Samoth69/IpDomainSync
+
 # Setup a non-root user
 RUN groupadd --system --gid 999 nonroot \
  && useradd --system --gid 999 --uid 999 --create-home nonroot
